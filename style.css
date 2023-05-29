@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: gray;
+}
+
+.box {
+  width: 350px;
+  height: 500px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.boxInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.front, .back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 100, 0.8)), to(rgba(0, 0, 100, 0.8))), url(img/california.jpg);
+  background-image: linear-gradient(rgba(0, 0, 100, 0.8), rgba(0, 0, 100, 0.8)), url(img/california.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 70px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.front h1, .back h1 {
+  color: white;
+  margin-bottom: 30px;
+}
+.front input, .back input {
+  display: block;
+  width: 100%;
+  background: transparent;
+  border-radius: 25px;
+  border: 1px solid white;
+  padding: 10px 20px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  outline: none;
+  color: white;
+}
+.front input::-webkit-input-placeholder, .back input::-webkit-input-placeholder {
+  color: white;
+}
+.front input::-moz-placeholder, .back input::-moz-placeholder {
+  color: white;
+}
+.front input:-ms-input-placeholder, .back input:-ms-input-placeholder {
+  color: white;
+}
+.front input::-ms-input-placeholder, .back input::-ms-input-placeholder {
+  color: white;
+}
+.front input::placeholder, .back input::placeholder {
+  color: white;
+}
+.front .submit, .back .submit {
+  width: 100%;
+  background: transparent;
+  border-radius: 25px;
+  border: 1px solid white;
+  display: block;
+  padding: 10px 20px;
+  outline: none;
+  color: white;
+}
+
+.new {
+  width: 100%;
+  background: transparent;
+  border-radius: 25px;
+  border: 1px solid white;
+  padding: 10px 20px;
+  outline: none;
+  color: white;
+  margin-top: 50px;
+}
+
+.back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
